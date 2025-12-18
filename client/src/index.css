@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --brand-green:#12775f;
+  --brand-gold:#d9b16f;
+  --brand-dark:#0f1115;
+}
+
+html,body,#root{height:100%}
+body{
+  background: radial-gradient( circle at 10% 10%, #071014 0%, var(--brand-dark) 40%, #050506 100%);
+  color: #efeae4;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Headings */
+h1,h2,h3{ font-family: "Cormorant Garamond", serif; color: #fff; }
+
+/* Premium glass card */
+.premium-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(217,177,111,0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 60px rgba(2,6,23,0.65);
+  border-radius: 16px;
+}
+
+/* Gold button */
+.btn-gold{
+  background: linear-gradient(90deg,#f0d8a0,var(--brand-gold));
+  color:#071014;
+  font-weight:700;
+  box-shadow: 0 10px 36px rgba(217,177,111,0.14);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn-gold:hover{ transform: translateY(-4px); box-shadow: 0 24px 60px rgba(217,177,111,0.18); }
+
+/* Card image */
+.card-figure{ position:relative; overflow:hidden; border-radius:12px 12px 0 0; }
+.card-figure img{ width:100%; height:100%; object-fit:cover; transition: transform .9s cubic-bezier(.2,.9,.2,1); }
+.card-figure:hover img{ transform: scale(1.08); }
+
+/* Hero tweaks */
+.hero-layer{
+  position:absolute; inset:0; background-position:center; background-size:cover; z-index:0;
+}
+.hero-overlay{ position:absolute; inset:0; background: linear-gradient(180deg, rgba(2,6,23,0.25), rgba(2,6,23,0.6)); z-index:1; }
+
+/* sticky booking CTA */
+.book-pill{
+  position: fixed; right: 18px; bottom: 18px; z-index:60; border-radius:999px; padding:12px 18px;
+  background: linear-gradient(90deg, rgba(217,177,111,0.98), rgba(233,200,130,0.98)); color:#071014; font-weight:700;
+  box-shadow: 0 18px 60px rgba(2,6,23,0.6);
+}
+
+/* container spacing */
+.section-wide{ padding-top:5rem; padding-bottom:5rem; }
+
+/* subtle divider */
+.section-divider{ height:1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent); margin: 28px 0; }
+
+/* small smooth entrance */
+.fade-in { transform: translateY(8px); opacity:0; transition: all .6s ease; }
+.fade-in.show { transform:none; opacity:1; }
+
+/* ===== MICRO INTERACTIONS (HOME PAGE) ===== */
+
+/* Card hover lift */
+.hover-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Image zoom on hover */
+.hover-image {
+  transition: transform 0.6s ease;
+}
+.hover-card:hover .hover-image {
+  transform: scale(1.08);
+}
+
+/* Button glow */
+.btn-glow {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(230, 184, 115, 0.45);
+}
+
+/* Section fade-in (no JS) */
+.fade-soft {
+  animation: fadeSoft 1s ease forwards;
+}
+@keyframes fadeSoft {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollDot {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(14px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+.animate-scroll {
+  animation: scrollDot 1.6s infinite ease;
+}
+
+
+.logo-wrap {
+  height: 72px;              /* visual logo height */
+  width: 200px;              /* controls perceived size */
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrap img {
+  height: 300%;              /* this is the key */
+  width: auto;
+  object-fit: contain;
+  transform: translateY(-6%); /* optional vertical correction */
+}
