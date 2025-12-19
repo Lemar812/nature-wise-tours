@@ -8,7 +8,7 @@ import {
   MapPin,
   Facebook,
   Instagram,
-  Twitter,
+  Tiktok,
   Whatsapp,
 } from "../lib/icons";
 
@@ -124,28 +124,25 @@ ${message}
             </li>
           </ul>
 
-          {/* Socials */}
+          {/* SOCIALS */}
           <div className="mt-10">
             <h4 className="text-lg font-semibold text-[var(--brand-green)] mb-4">
               Follow Us
             </h4>
 
             <div className="flex gap-4">
-              {[Facebook, Instagram, Twitter, Whatsapp].map((Icon, i) => (
-                <div
-                  key={i}
-                  className="group w-11 h-11 rounded-full bg-white/10
-                             flex items-center justify-center cursor-pointer
-                             transition-all duration-300
-                             hover:bg-[var(--brand-gold)] hover:scale-110"
-                >
-                  <Icon
-                    size={18}
-                    className="transition-all duration-300
-                               group-hover:text-black group-hover:-translate-y-0.5"
-                  />
-                </div>
-              ))}
+              <a href="https://www.facebook.com/profile.php?id=61581299813730" target="_blank">
+                <Facebook />
+              </a>
+              <a href="https://www.instagram.com/naturewise.tours" target="_blank">
+                <Instagram />
+              </a>
+              <a href="https://www.tiktok.com/@naturewise.tours" target="_blank">
+                <Tiktok />
+              </a>
+              <a href="https://wa.me/255741950553" target="_blank">
+                <Whatsapp />
+              </a>
             </div>
           </div>
         </div>

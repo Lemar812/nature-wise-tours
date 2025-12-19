@@ -94,7 +94,7 @@ export default function Header() {
       {open && (
         <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-xl flex flex-col">
           <div className="flex justify-between items-center px-6 h-28">
-            <img src={logo} className="h-20 w-auto object-contain scale-[1.2] origin-left"/>
+            <img src={logo} className="h-15 w-auto object-contain scale-[1.2] origin-left"/>
 
             <button
               onClick={() => setOpen(false)}

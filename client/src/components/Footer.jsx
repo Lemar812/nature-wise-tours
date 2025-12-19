@@ -7,7 +7,8 @@ import {
   Phone,
   Mail,
   MapPin,
-  Twitter,
+  Tiktok,
+  Whatsapp,
 } from "../lib/icons";
 
 export default function Footer() {
@@ -28,17 +29,21 @@ export default function Footer() {
             most iconic national parks.
           </p>
 
-          {/* Socials */}
+
+         {/* SOCIALS */}
           <div className="flex gap-4 mt-6">
-            {[Facebook, Instagram, Twitter].map((Icon, i) => (
-              <div
-                key={i}
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[var(--brand-gold)]
-                           flex items-center justify-center transition-all cursor-pointer"
-              >
-                <Icon size={18} />
-              </div>
-            ))}
+            <a href="https://www.facebook.com/profile.php?id=61581299813730" target="_blank">
+              <Facebook />
+            </a>
+            <a href="https://www.instagram.com/naturewise.tours" target="_blank">
+              <Instagram />
+            </a>
+            <a href="https://www.tiktok.com/@naturewise.tours" target="_blank">
+              <Tiktok />
+            </a>
+            <a href="https://wa.me/255741950553" target="_blank">
+              <Whatsapp />
+            </a>
           </div>
         </div>
 
